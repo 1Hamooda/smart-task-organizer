@@ -10,7 +10,7 @@ $db = $database->getConnection();
 // Initialize the TaskController
 $taskController = new TaskController($db);
 
-// Handle incoming requests
+// Handle incoming requests and route them
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 switch ($requestMethod) {
     case 'GET':
