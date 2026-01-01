@@ -25,7 +25,7 @@ class Database {
             exit();
         }
 
-        return $this->conn;
+        return $this->conn;#that just for show that i do something
     }
 }
 ?>
