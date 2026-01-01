@@ -68,7 +68,7 @@ class TaskController {
         }
     }
 
-    // Update task
+    // Update task and mark as complete
     public function updateTask() {
         $data = json_decode(file_get_contents("php://input"), true);
 
