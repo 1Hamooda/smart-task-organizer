@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Organizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Smart Task Organizer</h1>
+        </header>
+
+        <main>
+            <!-- Add Task Form -->
+            <section class="form-section">
+                <h2>Add New Task</h2>
+                <form id="taskForm">
+                    <input type="text" id="title" placeholder="Task Title" required>
+                    <textarea id="description" placeholder="Task Description"></textarea>
+                    <input type="datetime-local" id="deadline">
+                    <select id="priority">
+                        <option value="Low">Low Priority</option>
+                        <option value="Medium" selected>Medium Priority</option>
+                        <option value="High">High Priority</option>
+                    </select>
+                    <button type="submit">Add Task</button>
+                </form>
+            </section>
+
+            <!-- Filter & Sort Section -->
+            <section class="controls-section">
+                <div class="controls">
+                    <label>Filter:</label>
+                    <select id="filterSelect">
+                        <option value="">All Tasks</option>
+                        <option value="notcompleted">Not Completed</option>
+                        <option value="completed">Completed</option>
+                        <option value="highpriority">High Priority</option>
+                    </select>
+
+                    <label>Sort By:</label>
+                    <select id="sortSelect">
+                        <option value="">Default</option>
+                        <option value="deadline">Deadline</option>
+                        <option value="priority">Priority</option>
+                    </select>
+
+                    <button id="exportBtn">📥 Export to Text</button>
+                </div>
+            </section>
+
+            <!-- Tasks List -->
+            <section class="tasks-section">
+                <h2>Tasks</h2>
+                <div id="tasksList" class="tasks-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
